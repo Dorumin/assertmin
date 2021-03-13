@@ -1,6 +1,6 @@
 {
     "name": "assertmin",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "Extremely light assertion package",
     "main": "index.js",
     "author": "Doru",
@@ -9,5 +9,13 @@
         "type": "git",
         "url": "https://github.com/Dorumin/assertmin.git"
     },
+    "keywords": [
+        "assert",
+        "assertions",
+        "typescript",
+        "typings",
+        "simple",
+        "browser"
+    ],
     "license": "ISC"
 }
