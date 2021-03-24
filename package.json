@@ -1,7 +1,7 @@
 {
     "name": "assertmin",
-    "version": "0.0.10",
-    "description": "Extremely light assertion package",
+    "version": "0.1.0",
+    "description": "Extremely lightweight assertion package",
     "main": "index.js",
     "author": "Doru",
     "homepage": "https://github.com/Dorumin/assertmin",
