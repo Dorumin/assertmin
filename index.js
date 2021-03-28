@@ -5,6 +5,7 @@ function assert(cond) {
 }
 
 assert.assert = assert;
+assert.default = assert;
 assert.unchecked = function() {};
 
 assert.dev = function(cond) {

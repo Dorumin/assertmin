@@ -1,7 +1,12 @@
-interface assert {
+interface Assert {
     (assertion: boolean): asserts assertion;
-    eq<T>(left: T, right: T): void;
+
+    dev(assertion: boolean): asserts assertion;
     unchecked(assertion: boolean): asserts assertion;
+    eq<T>(left: T, right: T): void;
+
+    assert: Assert;
 }
 
-export declare const assert: assert;
+declare const assert: Assert;
+export = assert;
