@@ -7,6 +7,9 @@ function assert(cond) {
 assert.assert = assert;
 assert.default = assert;
 assert.unchecked = function() {};
+assert.unreachable = function() {
+    throw new Error('Reached unreachable code');
+};
 
 assert.dev = function(cond) {
     if (process.env.NODE_ENV !== 'production') {

@@ -44,6 +44,29 @@ function pad(n: Arg) {
     // Now you can use it normally
     return n.toString().padStart(2, '0');
 }
+
+// Exhaustiveness checks
+type A = {
+    letter: 'a';
+};
+type B = {
+    letter: 'b';
+};
+type Letter = A | B;
+
+const letter: Letter = {
+    letter: 'b';
+};
+
+switch (letter.letter) {
+    case 'a':
+        break;
+    case 'b':
+        // Try commenting this case out
+        break;
+    default:
+        assert.unreachable();
+}
 ```
 
 The example above is way longer than the actual source code
