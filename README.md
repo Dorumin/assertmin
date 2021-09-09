@@ -65,7 +65,7 @@ switch (letter.letter) {
         // Try commenting this case out
         break;
     default:
-        assert.unreachable();
+        assert.unreachable(letter);
 }
 ```
 
