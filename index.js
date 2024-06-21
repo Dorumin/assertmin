@@ -50,6 +50,10 @@ assert.AnyOf = function(...shapes) {
     return new AnyOf(shapes);
 };
 
+assert.Optional = function(...shapes) {
+    return new AnyOf([undefined, ...shapes]);
+};
+
 function AnyType() {}
 
 const Any = new AnyType();

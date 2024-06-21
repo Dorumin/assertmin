@@ -83,7 +83,7 @@ assert.shape([], Object);
 assert.shape({}, Object);
 
 // Combinator shapes
-import { Tuple, AnyOf, Any } from 'assertmin';
+import { Tuple, AnyOf, Any, Optional } from 'assertmin';
 
 assert.shape([ 1, true, {}, "yeah" ], Tuple(Number, Boolean, Any, String));
 assert.shape(null, AnyOf(Array, Object, null));
@@ -109,7 +109,8 @@ assert.shape(
             y: {
                 c: String
             }
-        }
+        },
+        z: Optional(String)
     }
 );
 
