@@ -1,13 +1,16 @@
 {
     "name": "assertmin",
-    "version": "0.3.5",
-    "description": "Extremely lightweight assertion package",
+    "version": "0.4.0",
+    "description": "Lightweight assertion package",
     "main": "index.js",
     "author": "Doru",
     "homepage": "https://github.com/Dorumin/assertmin",
     "repository": {
         "type": "git",
         "url": "https://github.com/Dorumin/assertmin.git"
+    },
+    "scripts": {
+        "test": "mocha"
     },
     "keywords": [
         "assert",
@@ -17,5 +20,10 @@
         "simple",
         "browser"
     ],
-    "license": "ISC"
+    "license": "ISC",
+    "devDependencies": {
+        "chai": "^5.1.1",
+        "fix-esm": "^1.0.1",
+        "mocha": "^10.4.0"
+    }
 }
