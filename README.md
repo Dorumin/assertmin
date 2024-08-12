@@ -2,9 +2,9 @@ all other assertion packages on this damned registry are awful
 
 god awful.
 
-just use this one, it's like 4 lines of code and typescript declarations
+Just use this one, it's like 4 lines of code and typescript declarations
 
-it runs on the browser without polyfills like `process` for `assert`
+It runs on the browser without polyfills like `process` for `assert`. Works well with `io-ts`.
 
 ```ts
 import { assert } from 'assertmin';
@@ -67,55 +67,4 @@ switch (letter.letter) {
     default:
         assert.unreachable(letter);
 }
-
-// Shape assertions
-
-// Assert primitives
-assert.shape(undefined, undefined);
-assert.shape(null, null);
-assert.shape(true, Boolean);
-assert.shape(1, Number);
-assert.shape(1n, BigInt);
-assert.shape("hi", String);
-assert.shape(Symbol(), Symbol);
-assert.shape(() => {}, Function);
-assert.shape([], Object);
-assert.shape({}, Object);
-
-// Combinator shapes
-import { Tuple, AnyOf, Any, Optional } from 'assertmin';
-
-assert.shape([ 1, true, {}, "yeah" ], Tuple(Number, Boolean, Any, String));
-assert.shape(null, AnyOf(Array, Object, null));
-
-// Object shapes
-// Similar "minimum interface" checking like TypeScript
-assert.shape({ unchecked: true }, {});
-assert.shape({ a: 123 }, { a: Number });
-assert.shape(
-    {
-        a: true,
-        x: {
-            b: 123,
-            y: {
-                c: "yeah"
-            }
-        }
-    },
-    {
-        a: Boolean,
-        x: {
-            b: Number,
-            y: {
-                c: String
-            }
-        },
-        z: Optional(String)
-    }
-);
-
-// Shape checking is interesting for runtime type checking, but it
-// does not integrate directly with TypeScript types
-// You will need to cast a value to an appropriate type after checking its shape,
-// so it's liable to becoming out of sync with the type being casted to.
 ```
