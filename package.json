@@ -1,6 +1,6 @@
 {
     "name": "assertmin",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "description": "Lightweight assertion package",
     "main": "index.js",
     "author": "Doru",

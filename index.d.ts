@@ -1,5 +1,5 @@
 interface Assert {
-    (assertion: boolean): asserts assertion;
+    (assertion: boolean, message?: string): asserts assertion;
 
     dev(assertion: boolean, message?: string): asserts assertion;
     unchecked(assertion: boolean, impossible?: string): asserts assertion;
